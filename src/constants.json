@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://home.sensibo.com/api/v2",
+  "paths": {
+    "pods": "/users/me/pods",
+    "pod": "/pods",
+    "acStates": "/acStates",
+    "measurements": "/measurements"
+  },
+  "fields": {
+    "id": "id",
+    "room": "room",
+    "batteryVoltage": "batteryVoltage",
+    "temperature": "temperature",
+    "humidity": "humidity"
+  }
+}

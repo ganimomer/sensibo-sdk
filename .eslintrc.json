@@ -1,0 +1,20 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "extends": ["plugin:lodash/recommended", "eslint"],
+  "rules": {
+    "semi": ["error", "never"],
+    "indent": ["error", 2],
+    "object-curly-spacing": ["error", "never"],
+    "quotes": ["error", "single"],
+    "newline-after-var": ["error", "never"],
+    "func-style": ["error", "declaration", {"allowArrowFunctions": true}],
+    "lodash/prefer-lodash-method": "off",
+    "space-before-function-paren": ["error", {"anonymous": "always", "named": "never"}]
+  },
+  "env": {
+    "node": true
+  },
+  "plugins": ["lodash"]
+}
