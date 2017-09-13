@@ -3,7 +3,7 @@ const {URL, URLSearchParams} = require('url')
 const {join: joinPath} = require('path')
 const createUrl = (path, baseUrl, query) => {
   if (baseUrl) {
-    const {pathname = ''} = new URL(baseUrl)
+    const {pathname} = new URL(baseUrl)
     path = [pathname].concat(path)
   }
   const url = new URL(Array.isArray(path) ? joinPath(...path) : path, baseUrl)

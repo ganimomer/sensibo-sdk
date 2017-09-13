@@ -14,7 +14,7 @@ describe('SensiboClient', () => {
   })
   describe('getPods', () => {
     const path = `${baseUrl}${paths.pods}?apiKey=${fakeApiKey}&fields=${fields.id},${fields.room}`
-    it('should return an array of Pod objects based on the returned values from the request', async() => {
+    it('should return an array of Pod objects based on the returned values from the request', async () => {
       const mock = new MockAdapter(axios)
       const pod = {id: '1', room: {icon: 'lounge', name: 'Lounge'}}
       mock.onGet(path).reply(200, {
