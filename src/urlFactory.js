@@ -6,7 +6,7 @@ const createUrl = (path, baseUrl, query) => {
     const {pathname} = new URL(baseUrl)
     path = [pathname].concat(path)
   }
-  const url = new URL(Array.isArray(path) ? joinPath(...path) : path, baseUrl)
+  const url = new URL(Array.isArray(path) ? joinPath(...path) : path, new URL(baseUrl).origin)
   const searchParams = new URLSearchParams(query)
   url.search = decodeURIComponent(searchParams.toString())
   return url.href
